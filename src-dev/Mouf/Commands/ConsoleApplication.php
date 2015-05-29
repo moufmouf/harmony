@@ -48,7 +48,7 @@ class ConsoleApplication extends Application implements
         );
 
         $embeddedComposer = $embeddedComposerBuilder
-            ->setComposerFilename('../../../composer-harmony-dependencies.json')
+            ->setComposerFilename(__DIR__.'/../../../../../../composer-harmony-dependencies.json')
             ->setVendorDirectory('vendor-harmony')
             ->build();
 

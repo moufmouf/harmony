@@ -81,13 +81,13 @@ class TestController extends Controller
     public function index()
     {
         $this->template->getWebLibraryManager()->addJsFile('src-dev/views/javascript/autobahn/autobahn.min.js');
-        $this->template->getWebLibraryManager()->addJsFile('components/angularjs/angular.js');
+        $this->template->getWebLibraryManager()->addJsFile('vendor/components/angular.js/angular.js');
         $this->template->getWebLibraryManager()->addJsFile('src-dev/views/javascript/console-app.js');
         $this->template->getWebLibraryManager()->addJsFile('src-dev/views/javascript/console-tab-directive.js');
         $this->template->getWebLibraryManager()->addJsFile('src-dev/views/javascript/console-directive.js');
         $this->template->getWebLibraryManager()->addJsFile('src-dev/views/javascript/console-controller.js');
 
-        $this->template->getWebLibraryManager()->addCssFile('components/font-awesome/css/font-awesome.min.css');
+        $this->template->getWebLibraryManager()->addCssFile('vendor/components/font-awesome/css/font-awesome.min.css');
         $this->template->getWebLibraryManager()->addCssFile('src-dev/views/javascript/console.css');
 
         /*$this->contentBlock->addHtmlElement(new TwigTemplate($this->twigEnvironment, 'src-dev/views/harmony_installer/welcome.twig',

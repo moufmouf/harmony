@@ -2507,7 +2507,7 @@ return array(
             'constructor' => array(
                     0 => array(
                             'value' => array(
-                                    0 => 'components/bootstrap/js/bootstrap.js',
+                                    0 => 'vendor/components/bootstrap/js/bootstrap.js',
                                 ),
                             'parametertype' => 'primitive',
                             'type' => 'string',
@@ -2516,7 +2516,7 @@ return array(
                         ),
                     1 => array(
                             'value' => array(
-                                    0 => 'components/bootstrap/css/bootstrap.min.css',
+                                    0 => 'vendor/components/bootstrap/css/bootstrap.min.css',
                                 ),
                             'parametertype' => 'primitive',
                             'type' => 'string',
@@ -2532,7 +2532,7 @@ return array(
             'constructor' => array(
                     0 => array(
                             'value' => array(
-                                    0 => 'components/jquery/jquery.js',
+                                    0 => 'vendor/components/jquery/jquery.min.js',
                                 ),
                             'parametertype' => 'primitive',
                             'type' => 'string',
@@ -2556,7 +2556,7 @@ return array(
             'constructor' => array(
                     0 => array(
                             'value' => array(
-                                    0 => 'components/underscore/underscore-min.js',
+                                    0 => 'vendor/components/underscore/underscore-min.js',
                                 ),
                             'parametertype' => 'primitive',
                             'type' => 'string',
@@ -2580,7 +2580,7 @@ return array(
             'constructor' => array(
                     0 => array(
                             'value' => array(
-                                    0 => 'components/jquery-ui/jquery-ui.min.js',
+                                    0 => 'vendor/components/jqueryui/jquery-ui.min.js',
                                 ),
                             'parametertype' => 'primitive',
                             'type' => 'string',
@@ -2589,7 +2589,7 @@ return array(
                         ),
                     1 => array(
                             'value' => array(
-                                    0 => 'components/jquery-ui/themes/ui-lightness/jquery-ui.min.css',
+                                    0 => 'vendor/components/jqueryui/themes/ui-lightness/jquery-ui.min.css',
                                 ),
                             'parametertype' => 'primitive',
                             'type' => 'string',

@@ -74,9 +74,9 @@ class ValidatorsController extends Controller
     {
         $validatorsBlock = new Validators();
 
-        $this->template->getWebLibraryManager()->addJsFile("vendor/bower_components/angular/angular.min.js");
-        $this->template->getWebLibraryManager()->addJsFile("vendor/bower_components/angular-ui-bootstrap-bower/ui-bootstrap.min.js");
-        $this->template->getWebLibraryManager()->addJsFile("vendor/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js");
+        $this->template->getWebLibraryManager()->addJsFile("vendor/components/angular/angular.min.js");
+        $this->template->getWebLibraryManager()->addJsFile("vendor/components/angular-ui-bootstrap-bower/ui-bootstrap.min.js");
+        $this->template->getWebLibraryManager()->addJsFile("vendor/components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js");
 
         $this->template->getWebLibraryManager()->addJsFile("src-dev/views/validators/validators-app.js");
         $this->template->getWebLibraryManager()->addJsFile("src-dev/views/validators/validators-controller.js");
