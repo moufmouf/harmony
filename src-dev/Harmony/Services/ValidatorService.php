@@ -41,10 +41,12 @@ class ValidatorService
     }
 
     /**
-     * Returns the list of all instances implementing the ValidatorInterface
+     * Returns the list of all instances implementing the ValidatorInterface or tagged as "harmony_validators"
      */
     public function getInstanceValidators() {
-        return $this->containerService->getInstancesImplementing("Harmony\\Validator\\ValidatorInterface");
+        $validatorInstancesByType = $this->containerService->getInstancesImplementing("Harmony\\Validator\\ValidatorInterface");
+        $validatorInstancesByTag = $this->containerService->getInstancesByTag("harmony_validators");
+        return array_flip(array_flip(array_merge($validatorInstancesByType, $validatorInstancesByTag)));
     }
 
     /**

@@ -141,8 +141,12 @@ class MyController implements ValidatorInterface {
 }
 ```
 
-For each instance of the class declared in your application's controller, the validator will run once. This also means that if you do not
+For each instance of the class declared in your application's container, the validator will run once. This also means that if you do not
 declare an instance of this class in your container, the validator will be ignored.
+
+**Important**: in some frameworks, the container cannot be searched by type, or only one instance can be bound to a particular interface 
+(Laravel comes to mind). For those frameworks, you must "tag" your validators with the **harmony_validators** tag. This will ensure
+the validators are detected and correctly handled.
 
 Including validators in your Composer packages
 ----------------------------------------------

@@ -59,4 +59,43 @@ class ContainerService
 
         return $instances;
     }
+
+    /**
+     * Returns a list of instances by `$tag`
+     *
+     * @param string $tag
+     * @return string[] An array of instances name.
+     */
+    public function getInstancesByTag($tag) {
+
+        $instances = $this->cache->get('instances_by_tag_'.$tag);
+
+        if ($instances === null) {
+            $instances = $this->_getInstancesByTagWithoutCache($tag);
+            $this->cache->set('instances_by_tag_'.$tag, $instances, self::CACHE_DURATION);
+        }
+        return $instances;
+    }
+
+    /**
+     * Returns a list of instances by `$tag`
+     *
+     * @param string $tag
+     * @return string[] An array of instances name.
+     */
+    public function _getInstancesByTagWithoutCache($tag)
+    {
+        // Let's first check if a "modules.php" file exist. If not, we can't do anything.
+        if (!file_exists(__DIR__.'/../../../../../../modules.php')) {
+            return array();
+        }
+
+        $codeProxy = new CodeProxy();
+        $instances = $codeProxy->execute(function() use ($tag) {
+            $containerExplorerService = ContainerExplorerService::create();
+            return $containerExplorerService->getInstancesByTag($tag);
+        });
+
+        return $instances;
+    }
 }

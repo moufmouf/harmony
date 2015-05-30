@@ -53,12 +53,30 @@ class ContainerExplorerService
     /**
      * Returns the name of the instances implementing `$type`, searching in all the available modules.
      *
-     * @return string[]
+     * @param string $type A fully qualified class or interface name
+     * @return \string[]
      */
     public function getInstancesByType($type) {
         $instances = [];
         foreach ($this->modules as $module) {
             $instancesForModule = $module->getContainerExplorer()->getInstancesByType($type);
+            $instances = array_merge($instances, $instancesForModule);
+        }
+        // Remove duplicate instances
+        $instances = array_flip(array_flip($instances));
+        return $instances;
+    }
+
+    /**
+     * Returns the name of the instances tagged with $tag.
+     *
+     * @param string $tag The tag to retrieve
+     * @return \string[]
+     */
+    public function getInstancesByTag($tag) {
+        $instances = [];
+        foreach ($this->modules as $module) {
+            $instancesForModule = $module->getContainerExplorer()->getInstancesByTag($tag);
             $instances = array_merge($instances, $instancesForModule);
         }
         // Remove duplicate instances
