@@ -14,6 +14,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/framework-interop/slim-module"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/framework-interop/module-autoinstaller"
         },
         {
@@ -119,7 +123,7 @@
 		"symfony/filesystem" : ">=2.3, <4.0",
 		"dflydev/embedded-composer-console": "~1.0",
         "composer/composer": ">= 1.0.0-alpha10",
-        "framework-interop/application" : "~1.0",
+        "framework-interop/application" : "~2.0",
       "framework-interop/module-autoinstaller": "~1.0",
       "mouf/html.renderer" : "~1.3",
         "mouf/root-container" : "~2.0",
